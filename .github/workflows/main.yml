@@ -24,7 +24,7 @@ jobs:
         curl -L https://github.com/ninja-build/ninja/releases/download/v1.11.1/ninja-win.zip > ninja.zip
         unzip ninja.zip
         mv ninja.exe build/
-        curl -L https://cdn.discordapp.com/attachments/585210694014599263/1153296790871883776/MFgd3Oz.7z > mpv.7z
+        curl -L https://cdn.discordapp.com/attachments/585210694014599263/1153298649653198900/hIea1EF.7z > mpv.7z
         7z x mpv.7z
         mkdir mpv
         mv include mpv
