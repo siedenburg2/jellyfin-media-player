@@ -24,7 +24,7 @@ jobs:
         curl -L https://github.com/ninja-build/ninja/releases/download/v1.11.1/ninja-win.zip > ninja.zip
         unzip ninja.zip
         mv ninja.exe build/
-        curl -L https://downloads.sourceforge.net/project/mpv-player-windows/libmpv/mpv-dev-x86_64-v3-20230917-git-181eddc.7z?ts=gAAAAABlCDW18-ofUS4hjRL3KZR8-YJCIP9_NZw2eTLsfI1pQwpBd44wGVtn79zmBNwIQyFdf_O7cMX-JEWmAQrsAVa5VqXRZg%3D%3D&r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fmpv-player-windows%2Ffiles%2Flibmpv%2Fmpv-dev-x86_64-v3-20230917-git-181eddc.7z%2Fdownload > mpv.7z
+        curl -L https://cdn.discordapp.com/attachments/585210694014599263/1153296790871883776/MFgd3Oz.7z > mpv.7z
         7z x mpv.7z
         mkdir mpv
         mv include mpv
