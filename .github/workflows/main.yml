@@ -3,9 +3,8 @@ name: build
 on:
   push:
     branches:
-      - release
-      - prerelease
-      - test
+      - master
+      
 jobs:
   build-win64:
     runs-on: windows-latest
