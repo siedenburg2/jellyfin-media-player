@@ -10,10 +10,12 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Install Qt 5.15.9
+    - name: Install Qt
       uses: jurplel/install-qt-action@v3
       with:
-        version: "5.15.9"
+        version: "5.15.*"
+        host: 'windows'
+        target: 'desktop'
         arch: "win64_msvc2019_64"
         modules: "qtwebengine"
     - name: Install dependencies
