@@ -9,8 +9,8 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Install Qt 5.15.2
-      uses: jurplel/install-qt-action@v4
+    - name: Install Qt 5.15.*
+      uses: jurplel/install-qt-action@v3
       with:
         version: "5.15.*"
         arch: "win64_msvc2019_64"
