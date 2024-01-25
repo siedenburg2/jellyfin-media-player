@@ -24,6 +24,7 @@ jobs:
         unzip ninja.zip
         mv ninja.exe build/
         curl -L https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20240125/mpv-dev-x86_64-v3-20240125-git-68f1057.7z > mpv.7z
+        curl -L https://sources.debian.org/data/main/m/mpv/0.35.1-4/libmpv/mpv.def > mpv.def
         7z x mpv.7z
         mkdir mpv
         mv include mpv
