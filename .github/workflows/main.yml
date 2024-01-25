@@ -3,9 +3,7 @@ name: build
 on:
   push:
     branches:
-      - release
-      - prerelease
-      - test
+      - master
 jobs:
   build-mac:
     runs-on: macos-11
