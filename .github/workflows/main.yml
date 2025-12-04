@@ -133,7 +133,8 @@ jobs:
       with:
         version: "6.8.0"
         arch: "win64_msvc2022_64"
-        modules: "qtwebengine"
+        modules: Core Network WebChannel Qml Quick Xml WebEngineQuick WebEngineCore Widgets OpenGL
+        host: "windows"
     - name: Install dependencies
       run: |
         mkdir build
