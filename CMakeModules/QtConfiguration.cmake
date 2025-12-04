@@ -21,7 +21,7 @@ if(IS_DIRECTORY "${QTROOT}/include")
   include_directories(${QTROOT}/include)
 endif()
 
-set(REQUIRED_QT_VERSION "6.0.0")
+set(REQUIRED_QT_VERSION "6")
 
 set(QTCONFIGROOT ${QTROOT}/lib/cmake/Qt6)
 set(components Core Network WebChannel Qml Quick Xml WebEngineQuick WebEngineCore Widgets OpenGL)
