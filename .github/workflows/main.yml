@@ -16,7 +16,7 @@ jobs:
       with:
         version: "6.8"
         arch: "win64_msvc2022_64"
-        modules: "qtwebengine"
+        modules: qtscxml qtmultimedia qtimageformats qtserialport qt5compat qtwebsockets qtpositioning qtwebchannel qtwebengine
         host: "windows"
     - name: Install dependencies
       run: |
