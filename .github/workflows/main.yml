@@ -8,13 +8,13 @@ jobs:
   build-win64:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v4
       with:
         submodules: recursive
     - name: Install Qt 6
       uses: jurplel/install-qt-action@v4
       with:
-        version: "6.8.1"
+        version: "6.8.0"
         arch: "win64_msvc2019_64"
         modules: "qtwebengine"
     - name: Install dependencies
