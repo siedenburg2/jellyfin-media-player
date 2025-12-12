@@ -11,10 +11,12 @@ jobs:
     - uses: actions/checkout@v4
       with:
         submodules: recursive
+    - name: Install Vulkan SDK
+      uses: jakoch/install-vulkan-sdk-action@v1
     - name: Install Qt 6
       uses: jurplel/install-qt-action@v4
       with:
-        version: "6.8.0"
+        version: "6.8.*"
         arch: "win64_msvc2022_64"
         modules: qtscxml qtmultimedia qtimageformats qtserialport qt5compat qtwebsockets qtpositioning qtwebchannel qtwebengine
         host: "windows"
@@ -22,8 +24,8 @@ jobs:
       run: |
         mkdir build
         curl -L https://aka.ms/vs/17/release/vc_redist.x64.exe > vc_redist.x64.exe
-        sed -i 's#C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\VC\\Redist\\MSVC\\v142\\vcredist_x64.exe#'"$(readlink -f vc_redist.x64.exe | sed 's#/\([a-z]\)/#\1:\\#g' | tr '/' '\\' | sed 's/\\/\\\\/g')#g" bundle/win/Bundle.wxs
-        curl -L https://github.com/ninja-build/ninja/releases/download/v1.10.2/ninja-win.zip > ninja.zip
+        sed -i 's#C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Redist\\MSVC\\v143\\vcredist_x64.exe#'"$(readlink -f vc_redist.x64.exe | sed 's#/\([a-z]\)/#\1:\\#g' | tr '/' '\\' | sed 's/\\/\\\\/g')#g" bundle/win/Bundle.wxs
+        curl -L https://github.com/ninja-build/ninja/releases/download/v1.13.2/ninja-win.zip > ninja.zip
         unzip ninja.zip
         mv ninja.exe build/
         curl -L https://sourceforge.net/projects/mpv-player-windows/files/libmpv/mpv-dev-x86_64-v3-20240304-git-9ac791c.7z/download > mpv.7z
